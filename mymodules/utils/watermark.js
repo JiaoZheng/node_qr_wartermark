@@ -7,8 +7,7 @@ var images = require("images");
  * 参数 url(string) 地址 
  * 参数 callback(Function) 
  */
-utils.createQr = function (url, callback) {
-
+utils.createQr = (url, callback)=>{
     var qr_png = qr.image(url, {
         type: 'png',
         size: 8
@@ -32,7 +31,7 @@ utils.createQr = function (url, callback) {
  * 参数 waterImg(string) 水印图片路径 
  * 参数 callback(Function) 
  */
-utils.addWater = function (sourceImg, waterImg, callback) {
+utils.addWater = (sourceImg, waterImg, callback)=>{
     var newImg = +(new Date()) + '' + Math.ceil(Math.random() * 89 + 10);
     var lastput = `${newImg}.png`;
     images(sourceImg) //Load image from file   
