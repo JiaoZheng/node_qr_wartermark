@@ -1,6 +1,7 @@
 var utils = require('./mymodules/utils/watermark');
 var async = require('async');
 
+
 var task1 = (callback) => {
     var url = 'http://www.hanyuan365.com/index.html?promotionCode=980812&time=1525767002853';
     utils.createQr(url, (err, data) => {
@@ -12,6 +13,7 @@ var task1 = (callback) => {
         callback(null, data);
     })
 };
+
 
 var task2 = (waterImg, callback) => {
     //原图  
